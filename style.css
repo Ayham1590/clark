@@ -1,0 +1,537 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Londrina Solid", Sans-serif;
+}
+
+@font-face {
+    font-family: "Londrina Solid";
+    src: url(LondrinaSolid-Regular.ttf);
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    width: 100%;
+    padding: 30px 500px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.navbar .title {
+    font-size: 2.5rem;
+    font-family: "Londrina Solid", Sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    height: 180vh;
+    background: linear-gradient(to bottom, #d98218, #482f11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.hero-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.welcome-text {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.hero-title {
+    font-size: 8rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.sub-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 15px 40px;
+    background-color: #a65900;
+    color: white;
+    border: none;
+    border-radius: 10px 10px 10px 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: "Londrina Solid", Sans-serif;
+
+}
+
+.btn:hover {
+    background-color: #e86f00;
+}
+
+.telegram-btn {
+    background-color: #0088cc;
+}
+
+.telegram-btn:hover {
+    background-color: #00aaff;
+}
+
+
+/* Social Links inside Hero */
+.social-container {
+    margin-top: 200px;
+}
+
+.social-title {
+    font-size: 4rem;
+    margin-bottom: 40px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.social-link {
+    width: 100px;
+    height: 100px;
+    background-color: #3a2f2f;
+    /* Background color similar to the reference */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.social-link img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.social-link:hover {
+    background-color: #a65900;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 5rem;
+    }
+
+    .sub-title {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+    }
+
+    .social-link {
+        width: 70px;
+        height: 70px;
+    }
+
+    .social-link img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .navbar {
+        padding: 20px;
+        /* Increase padding for better tap target size */
+        height: 70px;
+        /* Adjust height for mobile screens */
+    }
+
+    .navbar .title {
+        font-size: 2rem;
+        /* Ensure the text is visible on smaller screens */
+    }
+
+    .hero-img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .social-title {
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
+}
+
+/* Tokenomics Section */
+.tokenomics-section {
+    background-color: #101018;
+    /* Background color */
+    padding: 80px 20px;
+    /* Increased padding for height and spacing */
+    text-align: center;
+    color: white;
+}
+
+.tokenomics-title {
+    font-size: 8rem;
+    margin-bottom: 10px;
+    color: #ff6600;
+    /* Bright orange color for the title */
+}
+
+.contract-address {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.tokenomics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Three columns */
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    /* Limit the width of the grid */
+    margin: 0 auto;
+    /* Center the grid */
+    padding: 0 20px;
+    /* Padding around the grid to avoid touching the edges */
+}
+
+.tokenomics-box {
+    background-color: rgba(255, 165, 0, 0.1);
+    /* Light transparent orange background */
+    padding: 50px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 165, 0, 0.6);
+    /* Orange border matching the text */
+}
+
+.tokenomics-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6600;
+    /* Bright orange text */
+}
+
+.tokenomics-label {
+    font-size: 1.8rem;
+    margin-top: 10px;
+    color: white;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .tokenomics-grid {
+        grid-template-columns: 1fr;
+        /* Stacks boxes vertically on small screens */
+    }
+
+    .tokenomics-title {
+        font-size: 4rem;
+    }
+
+    .contract-address {
+        font-size: 0.9rem;
+        margin-bottom: 40px;
+        color: white;
+    }
+}
+
+/* For Your Information Section */
+.fyi-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    /* Black background */
+    padding: 50px 10%;
+    /* Adjust padding for spacing */
+    color: #fff;
+    /* White text */
+}
+
+.fyi-content {
+    flex: 1;
+    max-width: 50%;
+    /* Title and text on the left */
+}
+
+.fyi-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff6600;
+    /* Match your orange color */
+}
+
+.fyi-paragraph {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.fyi-image {
+    flex: 1;
+    text-align: right;
+    max-width: 50%;
+    /* Image on the right */
+}
+
+.fyi-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fyi-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .fyi-content,
+    .fyi-image {
+        max-width: 100%;
+    }
+
+    .fyi-image {
+        margin-top: 20px;
+    }
+
+    .fyi-title {
+        font-size: 2rem;
+    }
+
+    .fyi-paragraph {
+        font-size: 1rem;
+    }
+}
+
+/* All Hail the King Section */
+.king-section {
+    text-align: center;
+    background-color: #000;
+    /* Black background to match the theme */
+    padding: 50px 10%;
+    /* Spacing */
+    color: #ff6600;
+    /* Orange title color */
+}
+
+.king-title {
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.king-video {
+    max-width: 100%;
+    height: auto;
+}
+
+.king-video video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .king-title {
+        font-size: 2rem;
+    }
+}
+
+/* Meme section styling */
+.meme-section {
+    background-color: black;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+}
+
+.meme-section .section-title {
+    font-size: 5rem;
+    margin-bottom: 30px;
+    color: #FF8C00;
+}
+
+/* Carousel container */
+.carousel-container {
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Show 3 images at once */
+.carousel-item {
+    min-width: 33.33%;
+    /* Show 3 images side by side (100% / 3) */
+    box-sizing: border-box;
+    padding: 0 10px;
+    transition: transform 0.5s ease;
+
+    /* Space between images */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Carousel buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+/* Responsive for smaller screens (show 1 image on small screens) */
+@media (max-width: 768px) {
+    .meme-section .section-title {
+        font-size: 2rem;
+    }
+
+    .carousel-item {
+        min-width: 100%;
+        /* Show 1 image at a time on mobile */
+    }
+
+    .carousel-button {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+}
+
+/* Footer Styling */
+.footer {
+    background-color: black;
+    /* Black background for the footer */
+    color: white;
+    /* White text color */
+    padding: 20px 0;
+    /* Padding */
+    text-align: center;
+    /* Center the text */
+}
+
+.footer-container {
+    max-width: 1200px;
+    /* Maximum width of the footer content */
+    margin: 0 auto;
+    /* Center the footer content */
+}
+
+.social-links {
+    display: flex;
+    /* Use flexbox for layout */
+    justify-content: center;
+    /* Center the links */
+    align-items: center;
+    /* Align vertically */
+    gap: 30px;
+    /* Space between icons */
+}
+
+.social-link {
+    text-decoration: none;
+    /* Remove underline */
+    color: white;
+    /* White icon color */
+    font-size: 2rem;
+    /* Size for the icons */
+    transition: transform 0.3s ease;
+    /* Smooth transition for scaling */
+}
+
+.social-link i {
+    background: none;
+    /* Remove any background from the icons */
+    border: none;
+    /* Ensure no border */
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+    /* Scale up on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-link {
+        font-size: 1.5rem;
+        /* Slightly smaller font size on mobile */
+    }
+
+    .footer {
+        background-color: black;
+        /* Black background for the footer */
+        color: white;
+        /* White text color */
+        padding: 20px 0;
+        /* Padding */
+        text-align: center;
+        /* Center the text */
+    }
+}
