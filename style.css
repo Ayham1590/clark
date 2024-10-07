@@ -18,7 +18,7 @@ body {
 .navbar {
     position: absolute;
     width: 100%;
-    padding: 30px 500px;
+    padding: 30px 200px;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -50,7 +50,7 @@ body {
 }
 
 .hero-img {
-    width: 250px;
+    width: 260px;
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
@@ -184,7 +184,7 @@ body {
     }
 
     .hero-img {
-        width: 250px;
+        width: 260px;
         height: 250px;
         border-radius: 50%;
         object-fit: cover;
@@ -533,5 +533,16 @@ body {
         /* Padding */
         text-align: center;
         /* Center the text */
+    }
+
+    .social-links {
+        display: flex;
+        /* Use flexbox for layout */
+        justify-content: center;
+        /* Center the links */
+        align-items: center;
+        /* Align vertically */
+        gap: 10px;
+        /* Space between icons */
     }
 }
